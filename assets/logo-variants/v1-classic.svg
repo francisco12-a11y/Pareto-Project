@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="120" viewBox="0 0 420 120">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;display=swap');</style>
+  </defs>
+  <g transform="translate(30,30) scale(2.5)">
+    <path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/>
+  </g>
+  <text x="128" y="60" font-family="'Space Grotesk',Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="1" fill="#101014">STAR FOUNDER</text>
+  <text x="130" y="84" font-family="'Space Grotesk',Arial,sans-serif" font-size="12.5" font-weight="500" letter-spacing="3.2" fill="#101014" opacity="0.62">A COHORT BY KASIM ASLAM</text>
+</svg>

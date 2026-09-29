@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo variants — Star Founder</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#101014; --bone:#F7F4ED; --gold:#E9B44C; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;background:var(--bone);color:var(--ink);-webkit-font-smoothing:antialiased}
+  .container{max-width:960px;margin:0 auto;padding:56px 28px 80px}
+  h1{font-family:'Space Grotesk',sans-serif;font-size:34px;letter-spacing:-.02em;margin-bottom:8px}
+  .sub{color:rgba(16,16,20,.55);font-size:15.5px;margin-bottom:44px}
+  .card{border:1px solid rgba(16,16,20,.12);border-radius:12px;overflow:hidden;margin-bottom:26px}
+  .head{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:rgba(16,16,20,.04);border-bottom:1px solid rgba(16,16,20,.08)}
+  .head .name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px}
+  .head .use{font-size:13px;color:rgba(16,16,20,.55)}
+  .row{display:grid;grid-template-columns:1.4fr 1fr}
+  .cell{padding:34px;display:flex;align-items:center;justify-content:center;min-height:170px}
+  .cell.dark{background:var(--ink)}
+  .cell.light{background:var(--bone);border-left:1px solid rgba(16,16,20,.08)}
+  .cell svg{max-width:100%;height:auto}
+  .sizes{display:flex;align-items:center;gap:26px;padding:16px 22px;border-top:1px solid rgba(16,16,20,.08);background:rgba(16,16,20,.02)}
+  .sizes .s{display:flex;align-items:center;gap:10px;color:rgba(16,16,20,.55);font-size:12.5px}
+  .pick{margin-top:6px}
+  .pick a{color:#8a6516;font-weight:600;font-size:13.5px;text-decoration:none}
+  footer{color:rgba(247,244,237,.5);font-size:13px;text-align:center;padding:10px 0 40px}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Logo variants — Star Founder</h1>
+  <p class="sub">Six directions on the same idea: the four-point north star. Each is shown big on ink and bone, then at header size (26&nbsp;px) and favicon size (32&nbsp;px). Files live in <b>assets/logo-variants/</b>.</p>
+
+  <!-- ============ V1 ============ -->
+  <div class="card">
+    <div class="head"><span class="name">V1 · Classic</span><span class="use">current logo — the reference</span></div>
+    <div class="row">
+      <div class="cell light">
+        <svg viewBox="0 0 420 120" width="380"><g transform="translate(30,30) scale(2.5)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g><text x="128" y="60" font-family="'Space Grotesk',Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="1" fill="#101014">STAR FOUNDER</text><text x="130" y="84" font-family="'Space Grotesk',Arial,sans-serif" font-size="12.5" font-weight="500" letter-spacing="3.2" fill="#101014" opacity="0.62">A COHORT BY KASIM ASLAM</text></svg>
+      </div>
+      <div class="cell dark">
+        <svg viewBox="0 0 420 120" width="380"><g transform="translate(30,30) scale(2.5)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g><text x="128" y="60" font-family="'Space Grotesk',Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="1" fill="#F7F4ED">STAR FOUNDER</text><text x="130" y="84" font-family="'Space Grotesk',Arial,sans-serif" font-size="12.5" font-weight="500" letter-spacing="3.2" fill="#F7F4ED" opacity="0.62">A COHORT BY KASIM ASLAM</text></svg>
+      </div>
+    </div>
+    <div class="sizes">
+      <span class="s">header 26px:</span>
+      <span class="s"><svg viewBox="0 0 420 120" width="130"><g transform="translate(30,30) scale(2.5)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g><text x="128" y="60" font-family="'Space Grotesk',Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="1" fill="#101014">STAR FOUNDER</text></svg></span>
+      <span class="s">on ink:</span>
+      <span class="s" style="background:var(--ink);padding:6px 10px;border-radius:6px"><svg viewBox="0 0 420 120" width="130"><g transform="translate(30,30) scale(2.5)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g><text x="128" y="60" font-family="'Space Grotesk',Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="1" fill="#F7F4ED">STAR FOUNDER</text></svg></span>
+    </div>
+    <div class="head pick"><a href="assets/logo-variants/v1-classic.svg" target="_blank">v1-classic.svg</a></div>
+  </div>
+
+  <!-- ============ V2 ============ -->
+  <div class="card">
+    <div class="head"><span class="name">V2 · Minimal mono-line</span><span class="use">slim star, tracked-out light type — quiet and editorial</span></div>
+    <div class="row">
+      <div class="cell light">
+        <svg viewBox="0 0 460 120" width="400"><g transform="translate(38,38) scale(1.85)"><path d="M12 0C12.9 6.6 8.9 10.7 0.8 12 8.9 13.3 12.9 17.4 12 24 11.1 17.4 15.1 13.3 23.2 12 15.1 10.7 11.1 6.6 12 0Z" fill="#E9B44C"/></g><text x="92" y="72" font-family="'Space Grotesk',Arial,sans-serif" font-size="27" font-weight="500" letter-spacing="7" fill="#101014">STAR FOUNDER</text></svg>
+      </div>
+      <div class="cell dark">
+        <svg viewBox="0 0 460 120" width="400"><g transform="translate(38,38) scale(1.85)"><path d="M12 0C12.9 6.6 8.9 10.7 0.8 12 8.9 13.3 12.9 17.4 12 24 11.1 17.4 15.1 13.3 23.2 12 15.1 10.7 11.1 6.6 12 0Z" fill="#E9B44C"/></g><text x="92" y="72" font-family="'Space Grotesk',Arial,sans-serif" font-size="27" font-weight="500" letter-spacing="7" fill="#F7F4ED">STAR FOUNDER</text></svg>
+      </div>
+    </div>
+    <div class="sizes">
+      <span class="s">header 26px:</span>
+      <span class="s"><svg viewBox="0 0 460 120" width="140"><g transform="translate(38,38) scale(1.85)"><path d="M12 0C12.9 6.6 8.9 10.7 0.8 12 8.9 13.3 12.9 17.4 12 24 11.1 17.4 15.1 13.3 23.2 12 15.1 10.7 11.1 6.6 12 0Z" fill="#E9B44C"/></g><text x="92" y="72" font-family="'Space Grotesk',Arial,sans-serif" font-size="27" font-weight="500" letter-spacing="7" fill="#101014">STAR FOUNDER</text></svg></span>
+      <span class="s">on ink:</span>
+      <span class="s" style="background:var(--ink);padding:6px 10px;border-radius:6px"><svg viewBox="0 0 460 120" width="140"><g transform="translate(38,38) scale(1.85)"><path d="M12 0C12.9 6.6 8.9 10.7 0.8 12 8.9 13.3 12.9 17.4 12 24 11.1 17.4 15.1 13.3 23.2 12 15.1 10.7 11.1 6.6 12 0Z" fill="#E9B44C"/></g><text x="92" y="72" font-family="'Space Grotesk',Arial,sans-serif" font-size="27" font-weight="500" letter-spacing="7" fill="#F7F4ED">STAR FOUNDER</text></svg></span>
+    </div>
+    <div class="head pick"><a href="assets/logo-variants/v2-minimal.svg" target="_blank">v2-minimal.svg</a></div>
+  </div>
+
+  <!-- ============ V3 ============ -->
+  <div class="card">
+    <div class="head"><span class="name">V3 · Ring</span><span class="use">star in a thin orbit ring — the Evolution Engine nod</span></div>
+    <div class="row">
+      <div class="cell light">
+        <svg viewBox="0 0 460 120" width="400"><circle cx="60" cy="60" r="38" fill="none" stroke="#E9B44C" stroke-width="2"/><g transform="translate(38,38) scale(1.85)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g><text x="122" y="58" font-family="'Space Grotesk',Arial,sans-serif" font-size="31" font-weight="700" letter-spacing="1" fill="#101014">STAR FOUNDER</text><text x="124" y="82" font-family="'Space Grotesk',Arial,sans-serif" font-size="12" font-weight="500" letter-spacing="3.2" fill="#101014" opacity="0.62">A COHORT BY KASIM ASLAM</text></svg>
+      </div>
+      <div class="cell dark">
+        <svg viewBox="0 0 460 120" width="400"><circle cx="60" cy="60" r="38" fill="none" stroke="#E9B44C" stroke-width="2"/><g transform="translate(38,38) scale(1.85)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g><text x="122" y="58" font-family="'Space Grotesk',Arial,sans-serif" font-size="31" font-weight="700" letter-spacing="1" fill="#F7F4ED">STAR FOUNDER</text><text x="124" y="82" font-family="'Space Grotesk',Arial,sans-serif" font-size="12" font-weight="500" letter-spacing="3.2" fill="#F7F4ED" opacity="0.62">A COHORT BY KASIM ASLAM</text></svg>
+      </div>
+    </div>
+    <div class="sizes">
+      <span class="s">header 26px:</span>
+      <span class="s"><svg viewBox="0 0 460 120" width="140"><circle cx="60" cy="60" r="38" fill="none" stroke="#E9B44C" stroke-width="2"/><g transform="translate(38,38) scale(1.85)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g><text x="122" y="58" font-family="'Space Grotesk',Arial,sans-serif" font-size="31" font-weight="700" letter-spacing="1" fill="#101014">STAR FOUNDER</text></svg></span>
+      <span class="s">on ink:</span>
+      <span class="s" style="background:var(--ink);padding:6px 10px;border-radius:6px"><svg viewBox="0 0 460 120" width="140"><circle cx="60" cy="60" r="38" fill="none" stroke="#E9B44C" stroke-width="2"/><g transform="translate(38,38) scale(1.85)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g><text x="122" y="58" font-family="'Space Grotesk',Arial,sans-serif" font-size="31" font-weight="700" letter-spacing="1" fill="#F7F4ED">STAR FOUNDER</text></svg></span>
+    </div>
+    <div class="head pick"><a href="assets/logo-variants/v3-ring.svg" target="_blank">v3-ring.svg</a></div>
+  </div>
+
+  <!-- ============ V4 ============ -->
+  <div class="card">
+    <div class="head"><span class="name">V4 · Underline</span><span class="use">pure type with the hero's gold underline + star as the period</span></div>
+    <div class="row">
+      <div class="cell light">
+        <svg viewBox="0 0 460 120" width="400"><text x="30" y="72" font-family="'Space Grotesk',Arial,sans-serif" font-size="40" font-weight="700" letter-spacing="0.5" fill="#101014">STAR FOUNDER</text><rect x="268" y="80" width="176" height="5" fill="#E9B44C"/><g transform="translate(416,34) scale(0.95)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g></svg>
+      </div>
+      <div class="cell dark">
+        <svg viewBox="0 0 460 120" width="400"><text x="30" y="72" font-family="'Space Grotesk',Arial,sans-serif" font-size="40" font-weight="700" letter-spacing="0.5" fill="#F7F4ED">STAR FOUNDER</text><rect x="268" y="80" width="176" height="5" fill="#E9B44C"/><g transform="translate(416,34) scale(0.95)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g></svg>
+      </div>
+    </div>
+    <div class="sizes">
+      <span class="s">header 26px:</span>
+      <span class="s"><svg viewBox="0 0 460 120" width="140"><text x="30" y="72" font-family="'Space Grotesk',Arial,sans-serif" font-size="40" font-weight="700" letter-spacing="0.5" fill="#101014">STAR FOUNDER</text><rect x="268" y="80" width="176" height="5" fill="#E9B44C"/><g transform="translate(416,34) scale(0.95)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g></svg></span>
+      <span class="s">on ink:</span>
+      <span class="s" style="background:var(--ink);padding:6px 10px;border-radius:6px"><svg viewBox="0 0 460 120" width="140"><text x="30" y="72" font-family="'Space Grotesk',Arial,sans-serif" font-size="40" font-weight="700" letter-spacing="0.5" fill="#F7F4ED">STAR FOUNDER</text><rect x="268" y="80" width="176" height="5" fill="#E9B44C"/><g transform="translate(416,34) scale(0.95)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g></svg></span>
+    </div>
+    <div class="head pick"><a href="assets/logo-variants/v4-underline.svg" target="_blank">v4-underline.svg</a></div>
+  </div>
+
+  <!-- ============ V5 ============ -->
+  <div class="card">
+    <div class="head"><span class="name">V5 · Centered stack</span><span class="use">for avatars, OG cards and social profiles</span></div>
+    <div class="row">
+      <div class="cell light">
+        <svg viewBox="0 0 420 200" width="330"><g transform="translate(177,20) scale(2.75)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g><text x="210" y="132" text-anchor="middle" font-family="'Space Grotesk',Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="2" fill="#101014">STAR FOUNDER</text><text x="210" y="160" text-anchor="middle" font-family="'Space Grotesk',Arial,sans-serif" font-size="12" font-weight="500" letter-spacing="3.4" fill="#101014" opacity="0.62">A COHORT BY KASIM ASLAM</text></svg>
+      </div>
+      <div class="cell dark">
+        <svg viewBox="0 0 420 200" width="330"><g transform="translate(177,20) scale(2.75)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g><text x="210" y="132" text-anchor="middle" font-family="'Space Grotesk',Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="2" fill="#F7F4ED">STAR FOUNDER</text><text x="210" y="160" text-anchor="middle" font-family="'Space Grotesk',Arial,sans-serif" font-size="12" font-weight="500" letter-spacing="3.4" fill="#F7F4ED" opacity="0.62">A COHORT BY KASIM ASLAM</text></svg>
+      </div>
+    </div>
+    <div class="sizes">
+      <span class="s">avatar 64px:</span>
+      <span class="s" style="background:var(--ink);border-radius:12px;padding:8px"><svg viewBox="0 0 420 200" width="64"><g transform="translate(177,20) scale(2.75)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g><text x="210" y="132" text-anchor="middle" font-family="'Space Grotesk',Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="2" fill="#F7F4ED">STAR FOUNDER</text></svg></span>
+      <span class="s">og card 320px:</span>
+      <span class="s" style="background:var(--ink);padding:8px;border-radius:8px"><svg viewBox="0 0 420 200" width="320"><g transform="translate(177,20) scale(2.75)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/></g><text x="210" y="132" text-anchor="middle" font-family="'Space Grotesk',Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="2" fill="#F7F4ED">STAR FOUNDER</text><text x="210" y="160" text-anchor="middle" font-family="'Space Grotesk',Arial,sans-serif" font-size="12" font-weight="500" letter-spacing="3.4" fill="#F7F4ED" opacity="0.62">A COHORT BY KASIM ASLAM</text></svg></span>
+    </div>
+    <div class="head pick"><a href="assets/logo-variants/v5-stacked.svg" target="_blank">v5-stacked.svg</a></div>
+  </div>
+
+  <!-- ============ V6 ============ -->
+  <div class="card">
+    <div class="head"><span class="name">V6 · Compass</span><span class="use">8-point star — navigation flavor, denser mark</span></div>
+    <div class="row">
+      <div class="cell light">
+        <svg viewBox="0 0 460 120" width="400"><g transform="translate(32,32) scale(2.33)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C" opacity="0.45" transform="rotate(45 12 12)"/></g><text x="122" y="58" font-family="'Space Grotesk',Arial,sans-serif" font-size="31" font-weight="700" letter-spacing="1" fill="#101014">STAR FOUNDER</text><text x="124" y="82" font-family="'Space Grotesk',Arial,sans-serif" font-size="12" font-weight="500" letter-spacing="3.2" fill="#101014" opacity="0.62">A COHORT BY KASIM ASLAM</text></svg>
+      </div>
+      <div class="cell dark">
+        <svg viewBox="0 0 460 120" width="400"><g transform="translate(32,32) scale(2.33)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C" opacity="0.45" transform="rotate(45 12 12)"/></g><text x="122" y="58" font-family="'Space Grotesk',Arial,sans-serif" font-size="31" font-weight="700" letter-spacing="1" fill="#F7F4ED">STAR FOUNDER</text><text x="124" y="82" font-family="'Space Grotesk',Arial,sans-serif" font-size="12" font-weight="500" letter-spacing="3.2" fill="#F7F4ED" opacity="0.62">A COHORT BY KASIM ASLAM</text></svg>
+      </div>
+    </div>
+    <div class="sizes">
+      <span class="s">header 26px:</span>
+      <span class="s"><svg viewBox="0 0 460 120" width="140"><g transform="translate(32,32) scale(2.33)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C" opacity="0.45" transform="rotate(45 12 12)"/></g><text x="122" y="58" font-family="'Space Grotesk',Arial,sans-serif" font-size="31" font-weight="700" letter-spacing="1" fill="#101014">STAR FOUNDER</text></svg></span>
+      <span class="s">on ink:</span>
+      <span class="s" style="background:var(--ink);padding:6px 10px;border-radius:6px"><svg viewBox="0 0 460 120" width="140"><g transform="translate(32,32) scale(2.33)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C" opacity="0.45" transform="rotate(45 12 12)"/></g><text x="122" y="58" font-family="'Space Grotesk',Arial,sans-serif" font-size="31" font-weight="700" letter-spacing="1" fill="#F7F4ED">STAR FOUNDER</text></svg></span>
+    </div>
+    <div class="head pick"><a href="assets/logo-variants/v6-compass.svg" target="_blank">v6-compass.svg</a></div>
+  </div>
+
+  <!-- ============ V7 ============ -->
+  <div class="card" style="border-color:var(--gold)">
+    <div class="head"><span class="name" style="color:var(--gold)">V7 · Minimal compass ★ CHOSEN</span><span class="use">V2's minimal mono-line with the 8-point compass star — now live on the page</span></div>
+    <div class="row">
+      <div class="cell light">
+        <svg viewBox="0 0 460 120" width="400"><g transform="translate(38,38) scale(1.85)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C" opacity="0.45" transform="rotate(45 12 12)"/></g><text x="92" y="72" font-family="'Space Grotesk',Arial,sans-serif" font-size="27" font-weight="500" letter-spacing="7" fill="#101014">STAR FOUNDER</text></svg>
+      </div>
+      <div class="cell dark">
+        <svg viewBox="0 0 460 120" width="400"><g transform="translate(38,38) scale(1.85)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C" opacity="0.45" transform="rotate(45 12 12)"/></g><text x="92" y="72" font-family="'Space Grotesk',Arial,sans-serif" font-size="27" font-weight="500" letter-spacing="7" fill="#F7F4ED">STAR FOUNDER</text></svg>
+      </div>
+    </div>
+    <div class="sizes">
+      <span class="s">header 26px:</span>
+      <span class="s"><svg viewBox="0 0 460 120" width="140"><g transform="translate(38,38) scale(1.85)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C" opacity="0.45" transform="rotate(45 12 12)"/></g><text x="92" y="72" font-family="'Space Grotesk',Arial,sans-serif" font-size="27" font-weight="500" letter-spacing="7" fill="#101014">STAR FOUNDER</text></svg></span>
+      <span class="s">on ink:</span>
+      <span class="s" style="background:var(--ink);padding:6px 10px;border-radius:6px"><svg viewBox="0 0 460 120" width="140"><g transform="translate(38,38) scale(1.85)"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C"/><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="#E9B44C" opacity="0.45" transform="rotate(45 12 12)"/></g><text x="92" y="72" font-family="'Space Grotesk',Arial,sans-serif" font-size="27" font-weight="500" letter-spacing="7" fill="#F7F4ED">STAR FOUNDER</text></svg></span>
+    </div>
+    <div class="head pick"><a href="assets/logo-variants/v7-minimal-compass.svg" target="_blank">v7-minimal-compass.svg</a></div>
+  </div>
+
+  <footer>Pick a number and I'll wire it into the page, the favicon and the AI og-card.</footer>
+</div>
+</body>
+</html>
