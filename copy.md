@@ -98,7 +98,7 @@ You're buying one room with Kasim for ten weeks, your actual business on the tab
 - **Twelve months in the founder room.** The community his own masterminds run on, so the cadence outlives the ten weeks.
 - **The HIRE playbook.** The 7-step Pareto Talent Framework: postings, flytraps, paid trials, onboarding. Split-tested on hundreds of hires.
 - **Seven Laws of Delegation.** The complete series, the system the cohort runs on.
-- **Every book he's written, free.** Seven Critical Principles (the Amazon bestseller), The AEO Blueprint, and whatever he publishes next.
+- **Every book he's written, free.** Seven Critical Principles (the Amazon bestseller), The AEO Blueprint, and The HIRE, all yours with the cohort.
 
 **Founding cohort: $3,000.** One payment, everything above included. The whole cohort costs less than 90 minutes at his hourly rate.
 
