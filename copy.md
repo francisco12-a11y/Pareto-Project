@@ -14,7 +14,7 @@ Eyebrow: **A 10-WEEK COHORT BY KASIM ASLAM**
 
 # You are the bottleneck.
 
-The business grew. It grew onto you. Star Founder takes it off your back in ten weeks: you hand your ten most draining jobs to people who run them better than you did. Six companies built, three sold.
+The business grew. It grew onto you. Star Founder takes it off your back in ten weeks: hand off what’s drowning you, let your team step up and run it, and go back to being the founder instead of the operator.
 
 CTA: **Ready to Become a Star?**
 Under the button: Next cohort starts January 11, 2027. One room, 25 seats. Applications open.
@@ -89,7 +89,7 @@ The Evolution Engine: awareness, experiment, delegate, automate, cull. Your comp
 
 ## 6. The solution
 
-## Ten weeks. Twenty hours live. $3,000.
+## Ten weeks. Twenty hours live.
 
 You're buying one room with Kasim for ten weeks, your actual business on the table. Everything that comes with it:
 
@@ -98,6 +98,7 @@ You're buying one room with Kasim for ten weeks, your actual business on the tab
 - **Twelve months in the founder room.** The community his own masterminds run on, so the cadence outlives the ten weeks.
 - **The HIRE playbook.** The 7-step Pareto Talent Framework: postings, flytraps, paid trials, onboarding. Split-tested on hundreds of hires.
 - **Seven Laws of Delegation.** The complete series, the system the cohort runs on.
+- **Every book he's written, free.** Seven Critical Principles (the Amazon bestseller), The AEO Blueprint, and whatever he publishes next.
 
 **Founding cohort: $3,000.** One payment, everything above included. The whole cohort costs less than 90 minutes at his hourly rate.
 
