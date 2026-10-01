@@ -270,6 +270,11 @@
   @keyframes spin{to{transform:rotate(360deg)}}
   .form-slot.ready .form-wait{display:none}
 
+  /* off-screen pen for the preloaded form. The transform makes this box the containing
+     block for position:fixed descendants, so GHL's fixed wrapper is trapped inside;
+     -300vw + pointer-events:none make the whole thing physically unclickable. */
+  #form-keep{position:fixed;left:-300vw;top:0;width:480px;transform:translateZ(0);pointer-events:none;opacity:0}
+
   /* ---------- responsive ---------- */
   @media (max-width:960px){
     .navlinks a.hideable{display:none}
@@ -655,11 +660,15 @@
         </div>
       </div>
       <div class="modal-form">
-        <div id="form-home" style="width:100%"><div class="form-slot" id="form-slot"><!-- GHL Form 416 injects on hover-intent / first open --></div></div>
+        <div id="form-home" style="width:100%"></div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- off-screen pen: the form preloads here (real size, but physically unclickable);
+     openApply moves it into the popup, closeApply moves it back -->
+<div id="form-keep" aria-hidden="true"><div class="form-slot" id="form-slot"></div></div>
 
 <!-- ===== footer ===== -->
 <footer>
@@ -687,13 +696,14 @@
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
   // Apply modal: every CTA opens it in one click.
-  // The GHL form is NOT loaded with the page: its embed script wraps the iframe in a
-  // fixed-position container that escapes the hidden modal and eats clicks all over the
-  // page. So the form injects on hover-intent (fast enough in practice) and the slot is
-  // detached from the DOM whenever the modal closes, so nothing can leak out of it.
+  // The GHL form preloads IMMEDIATELY, but inside the off-screen #form-keep pen:
+  // transform on the pen traps GHL's fixed-position wrapper, and the pen sits at
+  // -300vw with pointer-events:none, so the loading form can't touch the page.
+  // openApply moves the loaded form into the popup; closeApply moves it back.
   const applyModal = document.getElementById('apply-modal');
   const formSlot = document.getElementById('form-slot');
   const formHome = document.getElementById('form-home');
+  const formKeep = document.getElementById('form-keep');
   let formInjected = false;
   function injectForm(){
     if(formInjected) return;
@@ -725,7 +735,7 @@
   }
   function openApply(){
     formHome.appendChild(formSlot);
-    // if GHL's script re-measured the iframe while it was detached, restore its height
+    // if GHL's script re-measured the iframe while it was in the pen, restore its height
     const f = formSlot.querySelector('iframe');
     if(f && f.getBoundingClientRect().height < 100 && f.getAttribute('data-height')){
       f.style.height = f.getAttribute('data-height') + 'px';
@@ -739,15 +749,12 @@
     applyModal.classList.remove('open');
     applyModal.setAttribute('aria-hidden','true');
     document.documentElement.style.overflow='';
-    formSlot.remove();
+    formKeep.appendChild(formSlot);
   }
-  document.querySelectorAll('[data-open-apply]').forEach(el=>{
-    el.addEventListener('click',(e)=>{ e.preventDefault(); injectForm(); openApply(); });
-    el.addEventListener('pointerenter',injectForm);
-    el.addEventListener('touchstart',injectForm,{passive:true});
-  });
+  document.querySelectorAll('[data-open-apply]').forEach(el=>el.addEventListener('click',(e)=>{ e.preventDefault(); openApply(); }));
   applyModal.querySelectorAll('[data-close-modal]').forEach(el=>el.addEventListener('click',closeApply));
   document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') closeApply(); });
+  injectForm();
 </script>
 </body>
 </html>
