@@ -100,7 +100,9 @@ You're buying one room with Kasim for ten weeks, your actual business on the tab
 - **Seven Laws of Delegation.** The complete series, the system the cohort runs on.
 - **Every book he's written, free.** Seven Critical Principles (the Amazon bestseller), The AEO Blueprint, and The HIRE, all yours with the cohort.
 
-**Founding cohort: $3,000.** **Built for you if:** the business does $1M+ or the equivalent and it grew onto you; you're the answer to every question and the approval on every decision; you'd rather hand off ten real jobs than collect another course.
+**Founding cohort: $3,000.** One payment, everything included. The whole cohort costs less than 90 minutes at his hourly rate.
+
+**Built for you if:** the business does $1M+ or the equivalent and it grew onto you; you're the answer to every question and the approval on every decision; you'd rather hand off ten real jobs than collect another course.
 
 **Skip it if:** you're pre-revenue (nothing to hand off yet); you want tips (this is your business torn down live, in the room); you won't let go (the method's only failure mode is a founder who won't).
 
