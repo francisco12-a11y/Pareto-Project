@@ -120,7 +120,7 @@ Why the condition: the method has one failure mode, a founder who won't let go. 
 
 ## 8. About
 
-## The welfare baby with three exits.
+## From selling candy to selling companies.
 
 Kasim Aslam grew up in Albuquerque. As a kid he bought candy at 10 cents a piece and sold it at 25. He dropped out of college, and his list of failed businesses reads like a cemetery: medical transcription, software, furniture, even mercury purification for amateur gold miners.
 
