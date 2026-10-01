@@ -50,7 +50,7 @@ You approve everything, so nothing moves without you. You hire help, then spend 
 
 The delegation books told you to let go. Nobody told you what to hand over, or to whom, or what comes back. So you stayed in the chair.
 
-Meanwhile the clock you can't see: AI compresses the life of everything that works. Copywriting went from experiment to commodity in 18 months. A $400 resume service died six months after ChatGPT shipped. The strategy that built your business is now killing it.
+One more problem, and it's the big one. AI is shrinking the life of everything that works. Copywriting went from wide open to commodity in 18 months. A $400 resume service was dead six months after ChatGPT shipped. Your main offer is on the same curve. The strategy that built your business is now killing it.
 
 > The race isn't against AI. It's against the founder in your space who figured this out months before you did.
 
