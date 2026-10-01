@@ -126,9 +126,7 @@ Kasim Aslam grew up in Albuquerque. As a kid he bought candy at 10 cents a piece
 
 Then the machine worked. He built Solutions 8 into the #1-ranked Google Ads agency in the world: about 100 people, $100M+ in ad spend under management, 40% margins, run by a founder who never learned to run a Google Ads campaign. He sold it in 2022 for eight figures. Since then he has built six multimillion-dollar businesses in total and sold three of them.
 
-One of them is Pareto Talent, the placement company he built with that Ukrainian student who started as his $1,200-a-month EA. It did $1M in revenue in year one with zero paid ads, and it has paid more than $1M in salaries to people in emerging nations.
-
-He was diagnosed with autism in his late thirties. His read: failure just feels like data.
+One of them is Pareto Talent, the placement company he built with Ivan Bunin. It did $1M in revenue in year one with zero paid ads, and it has paid more than $1M in salaries to people in emerging nations.
 
 Today he coaches founders at $2,000 an hour. Star Founder buys you twenty of those hours for about the price of ninety minutes.
 
