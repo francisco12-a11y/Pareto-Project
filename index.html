@@ -325,7 +325,7 @@
       <a class="hideable" href="#how">Ten Weeks</a>
       <a class="hideable" href="#offer">The Solution</a>
       <a class="hideable" href="#about">Kasim</a>
-      <a class="btn small" href="#apply">Apply for a Seat</a>
+      <a class="btn small" href="#apply" data-open-apply>Apply for a Seat</a>
     </nav>
   </div>
 </header>
@@ -341,7 +341,7 @@
       <h1>You are the <span class="under">bottleneck</span>.</h1>
       <p class="lede">The business grew. It grew <strong>onto you</strong>. Star Founder takes it off your back in ten weeks: hand off what’s drowning you, let your team step up and run it, and go back to being the founder instead of the operator.</p>
       <div class="cta-row">
-        <a class="btn" href="#apply">Ready to Become a Star? <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+        <a class="btn" href="#apply" data-open-apply>Ready to Become a Star? <svg class="icon"><use href="#i-arrow-right"/></svg></a>
         <span class="micro">Next cohort: <b>January 11, 2027</b> · one room, <b>25 seats</b> · applications open</span>
       </div>
     </div>
@@ -511,7 +511,7 @@
         <div class="pc-label">Founding cohort</div>
         <div class="price">$3,000</div>
         <p class="pc-note">One payment, everything included. The whole cohort costs less than 90 minutes at his hourly rate.</p>
-        <a class="btn" href="#apply" style="width:100%">Ready to Become a Star? <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+        <a class="btn" href="#apply" style="width:100%" data-open-apply>Ready to Become a Star? <svg class="icon"><use href="#i-arrow-right"/></svg></a>
         <div class="scarcity"><svg class="icon"><use href="#i-clock"/></svg>One room. 25 seats. Starts January 11, 2027. When the room fills, applications close.</div>
       </div>
     </div>
@@ -701,7 +701,7 @@
     applyModal.setAttribute('aria-hidden','true');
     document.documentElement.style.overflow='';
   }
-  document.querySelectorAll('[data-open-apply]').forEach(el=>el.addEventListener('click',openApply));
+  document.querySelectorAll('[data-open-apply]').forEach(el=>el.addEventListener('click',(e)=>{ e.preventDefault(); openApply(); }));
   applyModal.querySelectorAll('[data-close-modal]').forEach(el=>el.addEventListener('click',closeApply));
   document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') closeApply(); });
 </script>

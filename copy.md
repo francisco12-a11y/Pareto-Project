@@ -6,7 +6,7 @@ Voice: Kasim's. Short declaratives. Contrarian claim first, story second, framew
 
 ## Nav
 
-Logo left. One button right: **Apply for a Seat** → `#apply`
+Logo left. One button right: **Apply for a Seat** → opens the apply popup (like every CTA on the page, one click, no scrolling)
 
 ## 1. Hero
 
