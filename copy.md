@@ -102,7 +102,7 @@ You're buying one room with Kasim for ten weeks, your actual business on the tab
 
 **Founding cohort: $3,000.** One payment, everything included. The whole cohort costs less than 90 minutes at his hourly rate.
 
-**Built for you if:** the business does $1M+ or the equivalent and it grew onto you; you're the answer to every question and the approval on every decision; you'd rather hand off ten real jobs than collect another course.
+**Built for you if:** the business does $100K+ or the equivalent and it grew onto you; you're the answer to every question and the approval on every decision; you'd rather hand off ten real jobs than collect another course.
 
 **Skip it if:** you're pre-revenue (nothing to hand off yet); you want tips (this is your business torn down live, in the room); you won't let go (the method's only failure mode is a founder who won't).
 
