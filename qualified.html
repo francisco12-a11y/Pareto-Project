@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
 <title>You're in · Star Founder</title>
-<meta name="description" content="You qualified for the Star Founder cohort: ten weeks live online with Kasim Aslam, 25 seats, starts January 11, 2027. Claim your seat.">
+<meta name="description" content="You qualified for the Star Founder cohort: ten weeks live online with Kasim Aslam, 25 seats, starts January 11, 2027. Your seat is claimed.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,6 +66,7 @@
     border:1px solid var(--ink-12);
   }
   .btn.ghost:hover{box-shadow:none;border-color:var(--ink-55)}
+  .btn.claimed{cursor:default;pointer-events:none}
   .btn.small{padding:10px 18px;font-size:14.5px}
 
   /* sections */
@@ -147,6 +148,7 @@
 <!-- Lucide icon sprite -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
   <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 1.5c.7 5.9-2.2 8.8-8.1 9.5 5.9.7 8.8 3.6 8.1 9.5-.7-5.9 2.2-8.8 8.1-9.5-5.9-.7-8.8-3.6-8.1-9.5Z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
   <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
   <symbol id="i-credit-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
@@ -175,11 +177,10 @@
     <div class="inner">
       <div class="eyebrow"><svg><use href="#i-star"/></svg>You qualified</div>
       <h1>You're <span class="under">in</span>.</h1>
-      <p class="lede">Your answers cleared the bar, so take this page as your yes. Star Founder runs <strong>online</strong>: ten weeks live with Kasim, your actual business on the table, from wherever you work. One of the 25 seats is yours. It locks when the payment lands, and only then.</p>
+      <p class="lede">Your answers cleared the bar, so take this page as your yes. Star Founder runs <strong>online</strong>: ten weeks live with Kasim, your actual business on the table, from wherever you work. Your seat is one of 25, and it's locked in.</p>
       <div class="cta-row">
-        <!-- TODO(GHL): point this at the Stripe / GHL checkout link for the $3,000 payment -->
-        <a class="btn" href="#">Claim Your Seat · $3,000 <svg class="icon"><use href="#i-arrow-right"/></svg></a>
-        <span class="micro">Starts <b>January 11, 2027</b> · unclaimed seats go to the waitlist</span>
+        <span class="btn claimed"><svg class="icon"><use href="#i-check"/></svg>Seat Claimed</span>
+        <span class="micro">Starts <b>January 11, 2027</b> · ten weeks · online</span>
       </div>
     </div>
   </div>
@@ -193,13 +194,13 @@
     <div class="steps">
       <div class="step">
         <div class="st-top"><svg class="icon"><use href="#i-credit-card"/></svg><span class="num">01</span></div>
-        <h3>Claim the seat.</h3>
-        <p>One payment of <b>$3,000</b>, everything included: the twenty live hours, the Second Brain build, twelve months in the founder room, the books. The button above takes you to checkout.</p>
+        <h3>The seat is locked.</h3>
+        <p>Payment's in and the receipt is in your inbox. Everything's included: the twenty live hours, the Second Brain build, twelve months in the founder room, the books.</p>
       </div>
       <div class="step">
         <div class="st-top"><svg class="icon"><use href="#i-mail"/></svg><span class="num">02</span></div>
         <h3>Watch your inbox.</h3>
-        <p>Your welcome email goes out the moment the payment clears: receipt, start date, and what to prepare for week one. Not there in an hour? <b>Check spam</b>, then write to us.</p>
+        <p>Your welcome email is on its way: start date, the schedule, and what to prepare for week one. Not there in an hour? <b>Check spam</b>, then write to us.</p>
       </div>
       <div class="step">
         <div class="st-top"><svg class="icon"><use href="#i-calendar-check"/></svg><span class="num">03</span></div>
@@ -209,7 +210,7 @@
         <a class="btn ghost small" href="calendar.html">Pick a time <svg class="icon"><use href="#i-arrow-right"/></svg></a>
       </div>
     </div>
-    <p class="steps-note">Your seat is held for <span>72 hours</span> from this page. After that the offer passes to the waitlist. <!-- TODO(Fran): confirm the hold window, 72h is a placeholder --></p>
+    <p class="steps-note">That's the whole list. Book the call and you're done until <span>week one starts on January 11</span>.</p>
   </div>
 </section>
 
@@ -218,7 +219,7 @@
   <div class="container gbox">
     <div class="eyebrow"><svg><use href="#i-shield-check"/></svg>The Bottleneck Guarantee</div>
     <div class="bigquote">Finish the ten weeks. Ship your ten Miracle Briefs. If the business doesn't run measurably better without you, every dollar comes back.</div>
-    <p>No forms, no fight. The guarantee travels with the seat: it applies from the second your payment clears to the day the cohort ends.</p>
+    <p>No forms, no fight. The guarantee came with the seat: it switched on the second your payment cleared and runs to the day the cohort ends.</p>
     <div class="micro-line"><svg class="icon"><use href="#i-clock"/></svg>Questions before you pay? One email, one answer. <!-- TODO(Fran): add the support email here or swap this line for a mailto link --></div>
   </div>
 </section>
