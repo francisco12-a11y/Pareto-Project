@@ -230,6 +230,39 @@
     .btn:hover{transform:none}
   }
 
+  /* ---------- apply modal ---------- */
+  .modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:24px}
+  .modal.open{display:flex}
+  .modal-backdrop{position:absolute;inset:0;background:rgba(16,16,20,.78);backdrop-filter:blur(6px)}
+  .modal-card{
+    position:relative;z-index:1;width:100%;max-width:1080px;max-height:92vh;overflow:auto;
+    background:var(--ink);color:var(--bone);
+    border:1px solid var(--bone-14);border-radius:14px;
+    box-shadow:0 40px 90px rgba(0,0,0,.5);
+  }
+  .modal-close{
+    position:absolute;top:14px;right:14px;z-index:2;width:40px;height:40px;border-radius:999px;
+    border:1px solid var(--bone-14);background:rgba(16,16,20,.6);color:var(--bone-60);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .modal-close:hover{color:var(--bone);border-color:var(--bone-60)}
+  .modal-close .icon{width:18px;height:18px}
+  .modal-grid{display:grid;grid-template-columns:1fr 1fr}
+  .modal-copy{padding:44px 40px;border-right:1px solid var(--bone-08)}
+  .modal-copy .eyebrow{color:var(--gold);margin-bottom:18px}
+  .modal-copy h3{font-size:clamp(28px,3vw,38px);font-weight:700;letter-spacing:-.02em;margin-bottom:16px}
+  .modal-copy .mlead{font-size:16px;color:var(--bone-80);margin-bottom:24px;max-width:30em}
+  .mlist{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:26px}
+  .mlist li{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.55;color:var(--bone-80)}
+  .mlist li .icon{width:16px;height:16px;flex:none;margin-top:4px;color:var(--gold)}
+  .mproof{border-top:1px solid var(--bone-14);padding-top:22px;display:flex;flex-direction:column;gap:18px}
+  .mproof .q{font-family:'Space Grotesk',sans-serif;font-size:16.5px;font-weight:500;line-height:1.45;letter-spacing:-.01em}
+  .mproof cite{font-style:normal;font-size:13px;color:var(--bone-60);display:block;margin-top:6px}
+  .mstats{margin-top:4px;font-size:13px;color:var(--bone-60)}
+  .mstats b{color:var(--gold);font-weight:600}
+  .modal-form{padding:26px;display:flex;align-items:flex-start}
+  .form-slot{width:100%;min-height:519px;background:var(--bone);border-radius:10px;padding:14px}
+
   /* ---------- responsive ---------- */
   @media (max-width:960px){
     .navlinks a.hideable{display:none}
@@ -242,6 +275,10 @@
     .pricecard{position:static}
     section{padding:72px 0}
     .hero{padding:80px 0}
+    .modal{padding:12px}
+    .modal-grid{grid-template-columns:1fr}
+    .modal-copy{border-right:none;border-bottom:1px solid var(--bone-08);padding:34px 26px}
+    .modal-form{padding:20px}
   }
   @media (max-width:560px){
     .statgrid{grid-template-columns:repeat(2,1fr)}
@@ -573,14 +610,49 @@
   <div class="container">
     <div class="eyebrow rv"><svg><use href="#i-star"/></svg>The door</div>
     <h2 class="rv">Ready to Become a Star?</h2>
-    <p class="lede rv">25 seats. One room. Ten weeks. January 11, 2027. Applications are reviewed by the team and answered within two days. If the room fills, you're first in line for the next one.</p>
+    <p class="lede rv">25 seats. One room. Ten weeks. January 11, 2027. The form sorts your answers on the spot: clear the bar and you're in. Don't, and you get the honest no. If the room fills, you're first in line for the next one.</p>
     <!-- GHL application form embed goes here -->
     <div class="rv" style="margin-top:8px">
-      <button class="btn" type="button">Ready to Become a Star? <svg class="icon"><use href="#i-arrow-right"/></svg></button>
+      <button class="btn" type="button" data-open-apply>Ready to Become a Star? <svg class="icon"><use href="#i-arrow-right"/></svg></button>
     </div>
     <p class="formfine rv">No spam, no sequence, no "just checking in" emails. One answer.</p>
   </div>
 </section>
+
+<!-- ===== apply modal (GHL Form 416) ===== -->
+<div class="modal" id="apply-modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="apply-modal-title">
+    <button class="modal-close" type="button" data-close-modal aria-label="Close"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div class="modal-grid">
+      <div class="modal-copy">
+        <div class="eyebrow"><svg><use href="#i-star"/></svg>The door</div>
+        <h3 id="apply-modal-title">Two minutes. One answer.</h3>
+        <p class="mlead">The questions check what the cohort runs on: the money, the stage of the business, the timing. Hit submit and the form sorts on the spot.</p>
+        <ul class="mlist">
+          <li><svg class="icon"><use href="#i-check"/></svg>Clear the bar and you land on your seat page right away. Twenty live hours, the Second Brain build, twelve months in the founder room, the books.</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Don't, and you get the honest no: the why, the waitlist, and the HIRE book free.</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Either way it's one answer. No sequence, no "just checking in" emails.</li>
+        </ul>
+        <div class="mproof">
+          <!-- SAMPLE TESTIMONIALS: same fictional placeholders as the proof section above. Swap with real participant quotes before any real deployment. -->
+          <div>
+            <div class="q">"My ops lead runs the day-to-day now. I build the next one."</div>
+            <cite><b>Marcus T.</b> · Founder &amp; CEO, logistics company</cite>
+          </div>
+          <div>
+            <div class="q">"Ten weeks later my team ships without me in the thread."</div>
+            <cite><b>Priya S.</b> · Founder, e-commerce brand</cite>
+          </div>
+          <div class="mstats"><b>6</b> multimillion-dollar businesses · <b>3</b> exits · <b>$100M+</b> ad spend under management · <b>$2,000/hr</b> listed coaching rate</div>
+        </div>
+      </div>
+      <div class="modal-form">
+        <div class="form-slot" id="form-slot"><!-- GHL Form 416 injects here on first open --></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ===== footer ===== -->
 <footer>
@@ -606,6 +678,32 @@
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   },{threshold:.12});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  // Apply modal: opens on the main CTA, GHL form injects lazily on first open
+  const applyModal = document.getElementById('apply-modal');
+  const formSlot = document.getElementById('form-slot');
+  let formLoaded = false;
+  function openApply(){
+    applyModal.classList.add('open');
+    applyModal.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    if(!formLoaded){
+      formSlot.innerHTML = '<iframe src="https://api.leadconnectorhq.com/widget/form/rsXwEvf1icVohhpzHOop" style="width:100%;height:100%;border:none;border-radius:8px" id="inline-rsXwEvf1icVohhpzHOop" data-layout="{\'id\':\'INLINE\'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Form 416" data-height="519" data-layout-iframe-id="inline-rsXwEvf1icVohhpzHOop" data-form-id="rsXwEvf1icVohhpzHOop" data-cookie-consent="true" data-cookie-consent-provider="auto" title="Form 416"></iframe>';
+      const s = document.createElement('script');
+      s.src = 'https://link.msgsndr.com/js/form_embed.js';
+      formSlot.appendChild(s);
+      formLoaded = true;
+    }
+    applyModal.querySelector('.modal-close').focus();
+  }
+  function closeApply(){
+    applyModal.classList.remove('open');
+    applyModal.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow='';
+  }
+  document.querySelectorAll('[data-open-apply]').forEach(el=>el.addEventListener('click',openApply));
+  applyModal.querySelectorAll('[data-close-modal]').forEach(el=>el.addEventListener('click',closeApply));
+  document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') closeApply(); });
 </script>
 </body>
 </html>

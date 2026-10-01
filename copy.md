@@ -153,9 +153,11 @@ Then it's free. Ship the briefs, show the work, the money comes back. The Bottle
 
 ## Ready to Become a Star?
 
-25 seats. One room. Ten weeks. January 11, 2027. Applications are reviewed by the team and answered within two days. If the room fills, you're first in line for the next one.
+25 seats. One room. Ten weeks. January 11, 2027. The form sorts your answers on the spot: clear the bar and you're in. Don't, and you get the honest no. If the room fills, you're first in line for the next one.
 
-Button: **Ready to Become a Star?** (placeholder — the GHL application form embeds here later)
+Button: **Ready to Become a Star?** (opens the apply popup — GHL Form 416, id `rsXwEvf1icVohhpzHOop`, lazy-loaded on first open)
+
+Popup: **"Two minutes. One answer."** Left side: what happens after submit (the questions check the money, the stage, the timing; the form sorts on the spot; seat page or honest no with the waitlist and the free book; one answer, no sequence) + two sample quotes (Marcus T., Priya S.) + the stat line. Right side: the form on a bone panel. Closes by X, backdrop click, or Escape.
 
 No spam, no sequence, no "just checking in" emails. One answer.
 
