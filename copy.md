@@ -61,13 +61,13 @@ One more problem, and it's the big one. AI is shrinking the life of everything t
 ## Ten weeks, plainly.
 
 **Weeks 1–3. Get it out of your head.**
-You build your Second Brain, the capture system for everything only you know. Your first Miracle Brief ships in week one: outcome, first principles, mandate, deadline, belief signal. Export chaos, import order. That's the deal.
+Everything only you know goes into one system, your Second Brain. Your first Miracle Brief ships in week one: one page that gives your team the outcome, the rules, and the deadline, so someone else can run the job without asking you anything.
 
 **Weeks 4–7. Hand off the ten.**
-Delegate messy. Guardrails, never checklists. Of ten delegations, two come back worse, six fine, two better than you could do. That's the 2-6-2, and the two are the whole job. You'll hunt miracles, not mistakes.
+You hand off ten real jobs. They don't all go well at first, and that's the plan: of every ten, two come back worse, six come back fine, and two come back better than you could have done them. That's the 2-6-2, and the two are the whole job. Your people get guardrails and room to decide, not checklists.
 
 **Weeks 8–10. Install the engine.**
-The weekly mutation meeting. The optionality map. Core and Edge: one part of the business exploits, one experiments. From here, the machine starts deciding without you.
+The weekly mutation meeting takes over: what changed, what you learned, what runs at the core and what gets tested at the edge. By week ten, good decisions happen without you in the room. That's how you go back to being the founder.
 
 You leave with ten jobs off your plate, a capture system that survives you, and a cadence. Not a binder.
 
