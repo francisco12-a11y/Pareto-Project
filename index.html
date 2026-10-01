@@ -264,7 +264,11 @@
   .mstats{margin-top:4px;font-size:13px;color:var(--bone-60)}
   .mstats b{color:var(--gold);font-weight:600}
   .modal-form{padding:26px;display:flex;align-items:flex-start}
-  .form-slot{width:100%;min-height:519px;background:var(--bone);border-radius:10px;padding:14px}
+  .form-slot{width:100%;min-height:519px;background:var(--bone);border-radius:10px;padding:14px;position:relative}
+  .form-slot .form-wait{position:absolute;inset:14px;display:flex;align-items:center;justify-content:center;gap:12px;color:var(--ink-55);font-size:15px}
+  .form-slot .spin{width:22px;height:22px;border-radius:999px;border:2.5px solid var(--ink-12);border-top-color:var(--gold);animation:spin .8s linear infinite;flex:none}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .form-slot.ready .form-wait{display:none}
 
   /* ---------- responsive ---------- */
   @media (max-width:960px){
@@ -514,7 +518,7 @@
         <div class="pc-label">Founding cohort</div>
         <div class="price">$3,000</div>
         <p class="pc-note">One payment, everything included. The whole cohort costs less than 90 minutes at his hourly rate.</p>
-        <a class="btn" href="#apply" style="width:100%" data-open-apply>Ready to Become a Star? <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+        <a class="btn" href="#apply" style="width:100%;justify-content:center" data-open-apply>Ready to Become a Star? <svg class="icon"><use href="#i-arrow-right"/></svg></a>
         <div class="scarcity"><svg class="icon"><use href="#i-clock"/></svg>One room. 25 seats. Starts January 11, 2027. When the room fills, applications close.</div>
       </div>
     </div>
@@ -651,7 +655,7 @@
         </div>
       </div>
       <div class="modal-form">
-        <div class="form-slot" id="form-slot"><!-- GHL Form 416 injects here on first open --></div>
+        <div id="form-home" style="width:100%"><div class="form-slot" id="form-slot"><!-- GHL Form 416 injects on hover-intent / first open --></div></div>
       </div>
     </div>
   </div>
@@ -682,11 +686,50 @@
   },{threshold:.12});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
-  // Apply modal: every CTA opens it. The GHL form preloads with the page
-  // (modal is hidden with visibility, not display, so the iframe keeps its size)
+  // Apply modal: every CTA opens it in one click.
+  // The GHL form is NOT loaded with the page: its embed script wraps the iframe in a
+  // fixed-position container that escapes the hidden modal and eats clicks all over the
+  // page. So the form injects on hover-intent (fast enough in practice) and the slot is
+  // detached from the DOM whenever the modal closes, so nothing can leak out of it.
   const applyModal = document.getElementById('apply-modal');
   const formSlot = document.getElementById('form-slot');
+  const formHome = document.getElementById('form-home');
+  let formInjected = false;
+  function injectForm(){
+    if(formInjected) return;
+    formInjected = true;
+    formSlot.innerHTML = '<div class="form-wait"><span class="spin"></span>One moment, loading the form…</div>';
+    const f = document.createElement('iframe');
+    f.src = 'https://api.leadconnectorhq.com/widget/form/rsXwEvf1icVohhpzHOop';
+    f.style.cssText = 'width:100%;height:100%;border:none;border-radius:8px';
+    f.id = 'inline-rsXwEvf1icVohhpzHOop';
+    f.setAttribute('data-layout',"{'id':'INLINE'}");
+    f.setAttribute('data-trigger-type','alwaysShow');
+    f.setAttribute('data-trigger-value','');
+    f.setAttribute('data-activation-type','alwaysActivated');
+    f.setAttribute('data-activation-value','');
+    f.setAttribute('data-deactivation-type','neverDeactivate');
+    f.setAttribute('data-deactivation-value','');
+    f.setAttribute('data-form-name','Form 416');
+    f.setAttribute('data-height','519');
+    f.setAttribute('data-layout-iframe-id','inline-rsXwEvf1icVohhpzHOop');
+    f.setAttribute('data-form-id','rsXwEvf1icVohhpzHOop');
+    f.setAttribute('data-cookie-consent','true');
+    f.setAttribute('data-cookie-consent-provider','auto');
+    f.title = 'Form 416';
+    f.addEventListener('load',()=>formSlot.classList.add('ready'),{once:true});
+    formSlot.appendChild(f);
+    const s = document.createElement('script');
+    s.src = 'https://link.msgsndr.com/js/form_embed.js';
+    formSlot.appendChild(s);
+  }
   function openApply(){
+    formHome.appendChild(formSlot);
+    // if GHL's script re-measured the iframe while it was detached, restore its height
+    const f = formSlot.querySelector('iframe');
+    if(f && f.getBoundingClientRect().height < 100 && f.getAttribute('data-height')){
+      f.style.height = f.getAttribute('data-height') + 'px';
+    }
     applyModal.classList.add('open');
     applyModal.setAttribute('aria-hidden','false');
     document.documentElement.style.overflow='hidden';
@@ -696,15 +739,15 @@
     applyModal.classList.remove('open');
     applyModal.setAttribute('aria-hidden','true');
     document.documentElement.style.overflow='';
+    formSlot.remove();
   }
-  document.querySelectorAll('[data-open-apply]').forEach(el=>el.addEventListener('click',(e)=>{ e.preventDefault(); openApply(); }));
+  document.querySelectorAll('[data-open-apply]').forEach(el=>{
+    el.addEventListener('click',(e)=>{ e.preventDefault(); injectForm(); openApply(); });
+    el.addEventListener('pointerenter',injectForm);
+    el.addEventListener('touchstart',injectForm,{passive:true});
+  });
   applyModal.querySelectorAll('[data-close-modal]').forEach(el=>el.addEventListener('click',closeApply));
   document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') closeApply(); });
-
-  formSlot.innerHTML = '<iframe src="https://api.leadconnectorhq.com/widget/form/rsXwEvf1icVohhpzHOop" style="width:100%;height:100%;border:none;border-radius:8px" id="inline-rsXwEvf1icVohhpzHOop" data-layout="{\'id\':\'INLINE\'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Form 416" data-height="519" data-layout-iframe-id="inline-rsXwEvf1icVohhpzHOop" data-form-id="rsXwEvf1icVohhpzHOop" data-cookie-consent="true" data-cookie-consent-provider="auto" title="Form 416"></iframe>';
-  const ghlScript = document.createElement('script');
-  ghlScript.src = 'https://link.msgsndr.com/js/form_embed.js';
-  formSlot.appendChild(ghlScript);
 </script>
 </body>
 </html>
