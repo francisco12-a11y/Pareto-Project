@@ -114,6 +114,16 @@
   .steps-note{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(20px,2.4vw,26px);letter-spacing:-.01em;max-width:28em;margin-top:44px}
   .steps-note span{color:var(--ink-55)}
 
+  /* onboarding calendar placeholder */
+  .calbox{
+    display:flex;align-items:center;justify-content:center;gap:20px;
+    border:1.5px dashed var(--ink-12);border-radius:12px;
+    padding:54px 32px;text-align:left;background:rgba(16,16,20,.02);
+  }
+  .calbox>.icon{width:40px;height:40px;color:var(--ink);flex:none;margin:0}
+  .calbox .cb-title{font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;letter-spacing:-.01em;color:var(--ink);margin-bottom:6px}
+  .calbox p{font-size:15px;color:var(--ink-55);max-width:34em;line-height:1.6}
+
   /* guarantee band */
   .gbox{max-width:820px}
   .gbox .bigquote{
@@ -205,12 +215,27 @@
       <div class="step">
         <div class="st-top"><svg class="icon"><use href="#i-calendar-check"/></svg><span class="num">03</span></div>
         <h3>Book the onboarding call.</h3>
-        <p>Twenty minutes with the team before January 11. We check your delegation list, you ask anything, week one starts clean.</p>
-        <!-- TODO(GHL): swap this dummy for the real calendar URL (or embed the GHL calendar inside calendar.html) -->
-        <a class="btn ghost small" href="calendar.html">Pick a time <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+        <p>Twenty minutes with the team before January 11. We check your delegation list, you ask anything, week one starts clean. The calendar is right below.</p>
       </div>
     </div>
     <p class="steps-note">That's the whole list. Book the call and you're done until <span>week one starts on January 11</span>.</p>
+  </div>
+</section>
+
+<!-- onboarding calendar -->
+<section class="light" id="onboarding" style="padding-top:0">
+  <div class="container">
+    <div class="eyebrow"><svg><use href="#i-star"/></svg>Onboarding call</div>
+    <h2>Pick your time.</h2>
+    <!-- TODO(GHL): paste the GHL calendar embed code in place of this .calbox
+         (GHL builder → Calendars → your calendar → embed), or drop the iframe src in below -->
+    <div class="calbox">
+      <svg class="icon"><use href="#i-calendar-check"/></svg>
+      <div>
+        <div class="cb-title">The booking calendar goes here.</div>
+        <p>The GHL calendar embeds in this box, and this note disappears.</p>
+      </div>
+    </div>
   </div>
 </section>
 
