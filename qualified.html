@@ -24,6 +24,8 @@
     --bone-80:rgba(247,244,237,.86);
   }
   *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
   body{
     font-family:'Inter',sans-serif;
     background:var(--bone);
@@ -66,6 +68,11 @@
     border:1px solid var(--ink-12);
   }
   .btn.ghost:hover{box-shadow:none;border-color:var(--ink-55)}
+  .btn.ghost-dark{
+    background:transparent;color:var(--bone);
+    border:1px solid var(--bone-14);
+  }
+  .btn.ghost-dark:hover{box-shadow:none;border-color:var(--bone-60)}
   .btn.claimed{cursor:default;pointer-events:none}
   .btn.small{padding:10px 18px;font-size:14.5px}
 
@@ -190,8 +197,9 @@
       <p class="lede">Your answers cleared the bar, so take this page as your yes. Star Founder runs <strong>online</strong>: ten weeks live with Kasim, your actual business on the table, from wherever you work. Your seat is one of 25, and it's locked in.</p>
       <div class="cta-row">
         <span class="btn claimed"><svg class="icon"><use href="#i-check"/></svg>Seat Claimed</span>
-        <span class="micro">Starts <b>January 11, 2027</b> · ten weeks · online</span>
+        <a class="btn ghost-dark" href="#onboarding">Book Your Onboarding Call <svg class="icon"><use href="#i-arrow-right"/></svg></a>
       </div>
+      <p class="micro" style="margin-top:16px">Starts <b>January 11, 2027</b> · ten weeks · online</p>
     </div>
   </div>
 </section>
@@ -215,7 +223,8 @@
       <div class="step">
         <div class="st-top"><svg class="icon"><use href="#i-calendar-check"/></svg><span class="num">03</span></div>
         <h3>Book the onboarding call.</h3>
-        <p>Twenty minutes with the team before January 11. We check your delegation list, you ask anything, week one starts clean. The calendar is right below.</p>
+        <p>Twenty minutes with the team before January 11. We check your delegation list, you ask anything, week one starts clean.</p>
+        <a class="btn ghost small" href="#onboarding">Pick Your Time <svg class="icon"><use href="#i-arrow-right"/></svg></a>
       </div>
     </div>
     <p class="steps-note">That's the whole list. Book the call and you're done until <span>week one starts on January 11</span>.</p>
