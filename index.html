@@ -11,6 +11,8 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://api.leadconnectorhq.com">
+<link rel="preconnect" href="https://link.msgsndr.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -231,8 +233,9 @@
   }
 
   /* ---------- apply modal ---------- */
-  .modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:24px}
-  .modal.open{display:flex}
+  /* hidden with visibility (not display) so the preloaded GHL iframe keeps its dimensions */
+  .modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:24px;visibility:hidden;opacity:0;transition:opacity .18s ease,visibility .18s ease}
+  .modal.open{visibility:visible;opacity:1}
   .modal-backdrop{position:absolute;inset:0;background:rgba(16,16,20,.78);backdrop-filter:blur(6px)}
   .modal-card{
     position:relative;z-index:1;width:100%;max-width:1080px;max-height:92vh;overflow:auto;
@@ -253,8 +256,8 @@
   .modal-copy h3{font-size:clamp(28px,3vw,38px);font-weight:700;letter-spacing:-.02em;margin-bottom:16px}
   .modal-copy .mlead{font-size:16px;color:var(--bone-80);margin-bottom:24px;max-width:30em}
   .mlist{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:26px}
-  .mlist li{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.55;color:var(--bone-80)}
-  .mlist li .icon{width:16px;height:16px;flex:none;margin-top:4px;color:var(--gold)}
+  .mlist li{display:flex;gap:14px;align-items:flex-start;font-size:15px;line-height:1.55;color:var(--bone-80)}
+  .mlist .mnum{font-family:'Space Grotesk',sans-serif;font-size:12.5px;font-weight:500;letter-spacing:.18em;color:var(--bone-60);flex:none;margin-top:4px}
   .mproof{border-top:1px solid var(--bone-14);padding-top:22px;display:flex;flex-direction:column;gap:18px}
   .mproof .q{font-family:'Space Grotesk',sans-serif;font-size:16.5px;font-weight:500;line-height:1.45;letter-spacing:-.01em}
   .mproof cite{font-style:normal;font-size:13px;color:var(--bone-60);display:block;margin-top:6px}
@@ -628,21 +631,21 @@
       <div class="modal-copy">
         <div class="eyebrow"><svg><use href="#i-star"/></svg>The door</div>
         <h3 id="apply-modal-title">Two minutes. One answer.</h3>
-        <p class="mlead">The questions check what the cohort runs on: the money, the stage of the business, the timing. Hit submit and the form sorts on the spot.</p>
+        <p class="mlead">No human reads this and gets back to you in two days. The form checks your answers the moment you hit submit, and the next page tells you where you stand.</p>
         <ul class="mlist">
-          <li><svg class="icon"><use href="#i-check"/></svg>Clear the bar and you land on your seat page right away. Twenty live hours, the Second Brain build, twelve months in the founder room, the books.</li>
-          <li><svg class="icon"><use href="#i-check"/></svg>Don't, and you get the honest no: the why, the waitlist, and the HIRE book free.</li>
-          <li><svg class="icon"><use href="#i-check"/></svg>Either way it's one answer. No sequence, no "just checking in" emails.</li>
+          <li><span class="mnum">01</span><span>Hit submit and the form checks the bar: the money, the stage of your business, the timing.</span></li>
+          <li><span class="mnum">02</span><span>Over the bar, the next page is your seat: locked, everything included, starting with the receipt in your inbox.</span></li>
+          <li><span class="mnum">03</span><span>Under it, the next page is the honest no: the why, the waitlist, and the HIRE book free while you wait.</span></li>
         </ul>
         <div class="mproof">
-          <!-- SAMPLE TESTIMONIALS: same fictional placeholders as the proof section above. Swap with real participant quotes before any real deployment. -->
+          <!-- SAMPLE TESTIMONIALS: fictional placeholders, different from the proof section above. Swap with real participant quotes before any real deployment. -->
           <div>
-            <div class="q">"My ops lead runs the day-to-day now. I build the next one."</div>
-            <cite><b>Marcus T.</b> · Founder &amp; CEO, logistics company</cite>
+            <div class="q">"The first handoff shipped in week one. Week six, my ops lead owned the calendar."</div>
+            <cite><b>Elena V.</b> · Agency founder</cite>
           </div>
           <div>
-            <div class="q">"Ten weeks later my team ships without me in the thread."</div>
-            <cite><b>Priya S.</b> · Founder, e-commerce brand</cite>
+            <div class="q">"Twenty hours with Kasim beat three years of courses. He doesn't teach, he takes the weight."</div>
+            <cite><b>Sofia R.</b> · E-commerce founder</cite>
           </div>
           <div class="mstats"><b>6</b> multimillion-dollar businesses · <b>3</b> exits · <b>$100M+</b> ad spend under management · <b>$2,000/hr</b> listed coaching rate</div>
         </div>
@@ -679,21 +682,14 @@
   },{threshold:.12});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
-  // Apply modal: opens on the main CTA, GHL form injects lazily on first open
+  // Apply modal: every CTA opens it. The GHL form preloads with the page
+  // (modal is hidden with visibility, not display, so the iframe keeps its size)
   const applyModal = document.getElementById('apply-modal');
   const formSlot = document.getElementById('form-slot');
-  let formLoaded = false;
   function openApply(){
     applyModal.classList.add('open');
     applyModal.setAttribute('aria-hidden','false');
     document.documentElement.style.overflow='hidden';
-    if(!formLoaded){
-      formSlot.innerHTML = '<iframe src="https://api.leadconnectorhq.com/widget/form/rsXwEvf1icVohhpzHOop" style="width:100%;height:100%;border:none;border-radius:8px" id="inline-rsXwEvf1icVohhpzHOop" data-layout="{\'id\':\'INLINE\'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Form 416" data-height="519" data-layout-iframe-id="inline-rsXwEvf1icVohhpzHOop" data-form-id="rsXwEvf1icVohhpzHOop" data-cookie-consent="true" data-cookie-consent-provider="auto" title="Form 416"></iframe>';
-      const s = document.createElement('script');
-      s.src = 'https://link.msgsndr.com/js/form_embed.js';
-      formSlot.appendChild(s);
-      formLoaded = true;
-    }
     applyModal.querySelector('.modal-close').focus();
   }
   function closeApply(){
@@ -704,6 +700,11 @@
   document.querySelectorAll('[data-open-apply]').forEach(el=>el.addEventListener('click',(e)=>{ e.preventDefault(); openApply(); }));
   applyModal.querySelectorAll('[data-close-modal]').forEach(el=>el.addEventListener('click',closeApply));
   document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') closeApply(); });
+
+  formSlot.innerHTML = '<iframe src="https://api.leadconnectorhq.com/widget/form/rsXwEvf1icVohhpzHOop" style="width:100%;height:100%;border:none;border-radius:8px" id="inline-rsXwEvf1icVohhpzHOop" data-layout="{\'id\':\'INLINE\'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Form 416" data-height="519" data-layout-iframe-id="inline-rsXwEvf1icVohhpzHOop" data-form-id="rsXwEvf1icVohhpzHOop" data-cookie-consent="true" data-cookie-consent-provider="auto" title="Form 416"></iframe>';
+  const ghlScript = document.createElement('script');
+  ghlScript.src = 'https://link.msgsndr.com/js/form_embed.js';
+  formSlot.appendChild(ghlScript);
 </script>
 </body>
 </html>

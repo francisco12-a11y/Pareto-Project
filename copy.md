@@ -157,7 +157,7 @@ Then it's free. Ship the briefs, show the work, the money comes back. The Bottle
 
 Button: **Ready to Become a Star?** (opens the apply popup — GHL Form 416, id `rsXwEvf1icVohhpzHOop`, lazy-loaded on first open)
 
-Popup: **"Two minutes. One answer."** Left side: what happens after submit (the questions check the money, the stage, the timing; the form sorts on the spot; seat page or honest no with the waitlist and the free book; one answer, no sequence) + two sample quotes (Marcus T., Priya S.) + the stat line. Right side: the form on a bone panel. Closes by X, backdrop click, or Escape.
+Popup: **"Two minutes. One answer."** Left side: lead ("No human reads this and gets back to you in two days. The form checks your answers the moment you hit submit, and the next page tells you where you stand.") + three numbered steps (01 the form checks the bar: money, stage, timing; 02 over the bar, the next page is your seat; 03 under it, the honest no with the waitlist and the free HIRE book) + two sample quotes (Elena V., Sofia R. — fresh samples, different from the proof section) + the stat line. Right side: the form on a bone panel. The form **preloads with the page** (modal hidden with visibility, not display, so GHL's resize works) and is already loaded when any CTA opens the popup. Closes by X, backdrop click, or Escape.
 
 No spam, no sequence, no "just checking in" emails. One answer.
 
